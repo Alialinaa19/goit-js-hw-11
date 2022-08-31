@@ -38,8 +38,7 @@ async function onSubmit(e) {
     window.addEventListener('scroll', throttle(checkPosition, 300));
     window.addEventListener('resize', throttle(checkPosition, 300));
 };
-const controller = new AbortController();
-const signal = controller.signal;
+
 async function checkPosition() {
 try {
   const height = document.body.offsetHeight;
@@ -60,7 +59,8 @@ try {
         };   
     } catch (error){
         console.log(error, "ggggr");
-        controller.abort(response);
+    }
+    if (error) {
         return;
     }
     };
