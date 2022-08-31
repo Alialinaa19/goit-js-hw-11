@@ -40,6 +40,7 @@ async function onSubmit(e) {
 };
 
 async function checkPosition() {
+try {
   const height = document.body.offsetHeight;
   const screenHeight = window.innerHeight;
   const scrolled = window.scrollY;
@@ -55,9 +56,12 @@ async function checkPosition() {
         window.removeEventListener(`scroll`, checkPosition);
         window.removeEventListener(`resize`, checkPosition);
            return Notiflix.Notify.failure(`We're sorry, but you've reached the end of search results.`)
-        };  
-    
-};
+        };   
+    } catch (error){
+        console.log(error)
+    }
+    };
+
 
 function clearMarcup() {
     return refs.container.innerHTML = ``;
