@@ -58,7 +58,7 @@ try {
            return Notiflix.Notify.failure(`We're sorry, but you've reached the end of search results.`)
         };   
     } catch (error){
-        console.log(error);
+        console.log(error, "ggggr");
         return;
     }
 
