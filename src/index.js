@@ -49,7 +49,7 @@ try {
   const position = scrolled + screenHeight;
     if (position < threshold) { return }
         
-        const response = await apiService.fetchItems(signal);
+        const response = await apiService.fetchItems();
         insertMarcup(response);
         lightbox.refresh();
         
@@ -60,7 +60,7 @@ try {
         };   
     } catch (error){
         console.log(error, "ggggr");
-        controller.abort();
+        controller.abort(response);
         return;
     }
     };
