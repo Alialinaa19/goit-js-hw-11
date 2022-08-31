@@ -40,6 +40,7 @@ async function onSubmit(e) {
 };
 
 async function checkPosition() {
+    throw error;
 try {
   const height = document.body.offsetHeight;
   const screenHeight = window.innerHeight;
