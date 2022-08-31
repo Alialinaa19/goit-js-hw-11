@@ -49,7 +49,7 @@ try {
   const position = scrolled + screenHeight;
     if (position < threshold) { return }
         
-        const response = await apiService.fetchItems();
+        const response = await apiService.fetchItems(signal);
         insertMarcup(response);
         lightbox.refresh();
         
