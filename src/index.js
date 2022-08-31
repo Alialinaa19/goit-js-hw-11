@@ -55,13 +55,11 @@ try {
     if (apiService.getCounter >= response.data.totalHits) {
         window.removeEventListener(`scroll`, checkPosition);
         window.removeEventListener(`resize`, checkPosition);
-           return Notiflix.Notify.failure(`We're sorry, but you've reached the end of search results.`)
+           
         };   
     } catch (error){
         console.log(error, "ggggr");
-    }
-    if (error) {
-        return;
+        return Notiflix.Notify.failure(`We're sorry, but you've reached the end of search results.`)
     }
     };
 
