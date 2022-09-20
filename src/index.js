@@ -40,8 +40,7 @@ async function onSubmit(e) {
 };
 
 async function checkPosition() {
-    throw error;
-try {
+
   const height = document.body.offsetHeight;
   const screenHeight = window.innerHeight;
   const scrolled = window.scrollY;
@@ -60,12 +59,7 @@ try {
         };   
         if (error) {
             return;}
-    } catch (error){
-        console.log(error, "ggggr");
-        if (error) {
-            return;
-        }
-    }
+    
     };
 
 
